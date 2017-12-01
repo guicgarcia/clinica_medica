@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type service:</strong>
+  <%= @preservice.type_service %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @preservice.note %>
+</p>
+
+<p>
+  <strong>Reasons:</strong>
+  <%= @preservice.reasons %>
+</p>
+
+<p>
+  <strong>Situation:</strong>
+  <%= @preservice.situation %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @preservice.user %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @preservice.patient %>
+</p>
+
+<%= link_to 'Edit', edit_preservice_path(@preservice) %> |
+<%= link_to 'Back', preservices_path %>

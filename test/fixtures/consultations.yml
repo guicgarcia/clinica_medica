@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  historic: MyString
+  note: MyString
+  payment: MyString
+  status: MyString
+  doctor: one
+  patient: one
+
+two:
+  historic: MyString
+  note: MyString
+  payment: MyString
+  status: MyString
+  doctor: two
+  patient: two

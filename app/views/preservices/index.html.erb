@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Preservices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type service</th>
+      <th>Note</th>
+      <th>Reasons</th>
+      <th>Situation</th>
+      <th>User</th>
+      <th>Patient</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @preservices.each do |preservice| %>
+      <tr>
+        <td><%= preservice.type_service %></td>
+        <td><%= preservice.note %></td>
+        <td><%= preservice.reasons %></td>
+        <td><%= preservice.situation %></td>
+        <td><%= preservice.user %></td>
+        <td><%= preservice.patient %></td>
+        <td><%= link_to 'Show', preservice %></td>
+        <td><%= link_to 'Edit', edit_preservice_path(preservice) %></td>
+        <td><%= link_to 'Destroy', preservice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Preservice', new_preservice_path %>

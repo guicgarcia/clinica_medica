@@ -1,0 +1,47 @@
+<%= form_with(model: preservice, local: true) do |form| %>
+  <% if preservice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(preservice.errors.count, "error") %> prohibited this preservice from being saved:</h2>
+
+      <ul>
+      <% preservice.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type_service %>
+    <%= form.text_field :type_service, id: :preservice_type_service %>
+  </div>
+
+  <div class="field">
+    <%= form.label :note %>
+    <%= form.text_field :note, id: :preservice_note %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reasons %>
+    <%= form.text_field :reasons, id: :preservice_reasons %>
+  </div>
+
+  <div class="field">
+    <%= form.label :situation %>
+    <%= form.text_field :situation, id: :preservice_situation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :preservice_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :patient_id %>
+    <%= form.text_field :patient_id, id: :preservice_patient_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

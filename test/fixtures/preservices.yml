@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_service: MyString
+  note: MyString
+  reasons: MyString
+  situation: MyString
+  user: one
+  patient: one
+
+two:
+  type_service: MyString
+  note: MyString
+  reasons: MyString
+  situation: MyString
+  user: two
+  patient: two
