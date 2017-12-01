@@ -54,7 +54,7 @@ gem 'jquery-rails'
 gem 'nested_form'
 gem 'devise'
 gem 'rails-erd', require: false, group: :development
-gem 'bootstrap-sass'
 gem 'bootstrap-generators'
 #gem 'simple_form'
 gem 'devise-bootstrap-views'
+gem 'bootstrap-sass', '~> 3.3.7'
