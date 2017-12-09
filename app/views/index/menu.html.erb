@@ -1,1 +1,38 @@
 <h1>Menu principal do usuario</h1>
+
+<br><br>
+
+<div class="" style="border: 2px solid black; padding: 20px 0px 20px 0px;">
+
+<div class="row">
+  <div class="col-md-6 ">
+    <%= link_to "Cadastar Pré Service", new_preservice_path, class: 'btn btn-warning btn-lg'%>
+  </div>
+  <div class="col-md-6 ">
+    <%= link_to "Listar Pré Serviço", preservices_path, class: 'btn btn-warning btn-lg'%>
+  </div>
+</div>
+
+<br><br>
+
+<div class="row">
+  <div class="col-md-6">
+    <%= link_to "Cadastar Consulta", new_consultation_path, class: 'btn btn-primary btn-lg'%>
+  </div>
+  <div class="col-md-6">
+    <%= link_to "Listar Consulta", consultations_path, class: 'btn btn-primary btn-lg'%>
+  </div>
+</div>
+
+<br><br>
+
+<div class="row">
+  <div class="col-md-6">
+    <%= link_to "Listar Doutores", doctors_path, class: 'btn btn-success btn-lg'%>
+  </div>
+  <div class="col-md-6">
+    <%= link_to "Listar Pacientes", patients_path, class: 'btn btn-success btn-lg'%>
+  </div>
+</div>
+
+</div>

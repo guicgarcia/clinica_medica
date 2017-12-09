@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :preservice
-  has_many :consultation
+  has_many :preservices
+  has_many :consultations
 end

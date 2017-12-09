@@ -1,10 +1,10 @@
 class CreateConsultations < ActiveRecord::Migration[5.1]
   def change
     create_table :consultations do |t|
-      t.string :historic
-      t.string :note
+      t.text :historic
+      t.text :note
       t.string :payment
-      t.string :status
+      t.text :status
       t.references :doctor, foreign_key: true
       t.references :patient, foreign_key: true
 

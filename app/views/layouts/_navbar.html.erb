@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+  <%= link_to "Clínica Médica", root_path, class: "navbar-brand" %>
+  <% if user_signed_in? %>
+    <ul class="nav navbar-nav pull-sm-right hidden-xs-down">
+      <li class="nav-item">
+        <%= link_to "Novo Pré Serviço", new_preservice_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Nova Consulta", new_consultation_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+      <%= link_to "deslogar", destroy_user_session_path, class: "nav-link", method: :DELETE %>
+      </li>
+    </ul>
+  <% end %>
+  </div>
+</nav>

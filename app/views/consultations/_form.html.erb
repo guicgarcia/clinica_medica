@@ -11,37 +11,39 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :historic %>
-    <%= form.text_field :historic, id: :consultation_historic %>
+    <%= form.text_area :historic, id: :consultation_historic, class:'form-control'%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :note %>
-    <%= form.text_field :note, id: :consultation_note %>
+    <%= form.text_area :note, id: :consultation_note,  class:'form-control'%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :payment %>
-    <%= form.text_field :payment, id: :consultation_payment %>
+    <%= form.text_field :payment, id: :consultation_payment, class:'form-control'%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :status %>
-    <%= form.text_field :status, id: :consultation_status %>
+    <%= form.text_area :status, id: :consultation_status,  class:'form-control'%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :doctor_id %>
-    <%= form.text_field :doctor_id, id: :consultation_doctor_id %>
+    <%= form.collection_select :doctor_id, Doctor.all, :id, :name, prompt: true %>
+    <!-- <%= form.text_field :doctor_id, id: :consultation_doctor_id %> -->
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :patient_id %>
-    <%= form.text_field :patient_id, id: :consultation_patient_id %>
+    <%= form.collection_select :patient_id, Patient.all, :id, :name, prompt: true %>
+    <!-- <%= form.text_field :patient_id, id: :consultation_patient_id %> -->
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <button class="btn btn-primary" type="submit">Cadastrar Consulta</button>
   </div>
 <% end %>

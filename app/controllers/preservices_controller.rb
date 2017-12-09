@@ -4,7 +4,7 @@ class PreservicesController < ApplicationController
   # GET /preservices
   # GET /preservices.json
   def index
-    @preservices = Preservice.all
+    @preservices = Preservice.all.includes(:patient)
   end
 
   # GET /preservices/1
@@ -14,7 +14,7 @@ class PreservicesController < ApplicationController
 
   # GET /preservices/new
   def new
-    @preservice = Preservice.new
+    @preservice = current_user.preservices.new
   end
 
   # GET /preservices/1/edit
@@ -24,7 +24,7 @@ class PreservicesController < ApplicationController
   # POST /preservices
   # POST /preservices.json
   def create
-    @preservice = Preservice.new(preservice_params)
+    @preservice = current_user.preservices.new(preservice_params)
 
     respond_to do |format|
       if @preservice.save
@@ -64,7 +64,7 @@ class PreservicesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_preservice
-      @preservice = Preservice.find(params[:id])
+      @preservice = current_user.preservices.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

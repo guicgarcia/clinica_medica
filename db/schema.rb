@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 20171201190356) do
 
   create_table "consultations", force: :cascade do |t|
-    t.string "historic"
-    t.string "note"
+    t.text "historic"
+    t.text "note"
     t.string "payment"
-    t.string "status"
+    t.text "status"
     t.integer "doctor_id"
     t.integer "patient_id"
     t.datetime "created_at", null: false
@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(version: 20171201190356) do
 
   create_table "preservices", force: :cascade do |t|
     t.string "type_service"
-    t.string "note"
-    t.string "reasons"
+    t.text "note"
+    t.text "reasons"
     t.string "situation"
     t.integer "user_id"
     t.integer "patient_id"

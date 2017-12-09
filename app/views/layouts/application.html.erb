@@ -11,13 +11,15 @@
   <body>
 
 	<!-- se o usuario estiver logado, aparece o botao deslogar  -->
-	
+
 	<!-- NAVBAR AQUI -->
-  	<% if user_signed_in? %> 
+  	<!-- <% if user_signed_in? %>
     	<%= link_to "deslogar", destroy_user_session_path, method: :DELETE %>
-  	<% end %>
-  
-    <div class="container" style="text-align: center;"> 
+  	<% end %> -->
+
+    <%= render "layouts/navbar" %>
+
+    <div class="container" style="text-align: center;">
       <%= yield %>
     </div>
 

@@ -2,16 +2,16 @@
 
 <h1>Consultations</h1>
 
-<table>
+<table class="table table-hover table-bordered">
   <thead>
     <tr>
-      <th>Historic</th>
-      <th>Note</th>
-      <th>Payment</th>
-      <th>Status</th>
-      <th>Doctor</th>
-      <th>Patient</th>
-      <th colspan="3"></th>
+      <th class="success">Historic</th>
+      <th class="success">Note</th>
+      <th class="success">Payment</th>
+      <th class="success">Status</th>
+      <th class="info">Doctor</th>
+      <th class="info">Patient</th>
+      <th colspan="3" class="active"></th>
     </tr>
   </thead>
 
@@ -22,8 +22,8 @@
         <td><%= consultation.note %></td>
         <td><%= consultation.payment %></td>
         <td><%= consultation.status %></td>
-        <td><%= consultation.doctor %></td>
-        <td><%= consultation.patient %></td>
+        <td><%= consultation.doctor.name %></td>
+        <td><%= consultation.patient.name %></td>
         <td><%= link_to 'Show', consultation %></td>
         <td><%= link_to 'Edit', edit_consultation_path(consultation) %></td>
         <td><%= link_to 'Destroy', consultation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
