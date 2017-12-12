@@ -11,37 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :patient_name %>
+    <%= form.text_field :name, id: :patient_name, class:'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :cpf %>
-    <%= form.text_field :cpf, id: :patient_cpf %>
+    <%= form.text_field :cpf, id: :patient_cpf, class:'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :birth %>
-    <%= form.text_field :birth, id: :patient_birth %>
+    <%= form.text_field :birth, id: :patient_birth, class:'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :phone %>
-    <%= form.text_field :phone, id: :patient_phone %>
+    <%= form.text_field :phone, id: :patient_phone, class:'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :address %>
-    <%= form.text_field :address, id: :patient_address %>
+    <%= form.text_field :address, id: :patient_address, class:'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :companion %>
-    <%= form.text_field :companion, id: :patient_companion %>
+    <%= form.text_field :companion, id: :patient_companion, class:'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Novo Paciente</button>
   </div>
 <% end %>
