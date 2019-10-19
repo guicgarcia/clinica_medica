@@ -57,4 +57,4 @@ gem 'rails-erd', require: false, group: :development
 gem 'bootstrap-generators'
 #gem 'simple_form'
 gem 'devise-bootstrap-views'
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap-sass', '~> 3.4.1'
